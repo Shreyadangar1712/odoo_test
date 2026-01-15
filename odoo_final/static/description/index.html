@@ -1,171 +1,294 @@
+<!-- ==================================================
+     Rishvi POS & Inventory — Full App Page
+================================================== -->
+
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
-    
-    .rishvi-body { font-family: 'Montserrat', sans-serif; color: #333; line-height: 1.6; }
-    .text-blue { color: #128cff; }
-    .bg-light-blue { background-color: #f8fbff; }
-    
-    /* Laptop Mockup Styling */
-    .laptop-container {
-        position: relative;
-        width: 80%;
-        margin: 40px auto;
-        padding: 3% 12% 4%;
-        background: url('https://raw.githubusercontent.com/t-davidson/laptop-mockup/master/macbook_gold.png') no-repeat center center;
-        background-size: contain;
-    }
-    .laptop-screen {
-        width: 100%;
-        aspect-ratio: 16 / 10;
-        background: #000;
-        overflow: hidden;
-        border-radius: 2px;
-    }
-    .laptop-screen img { width: 100%; height: 100%; object-fit: cover; }
-
-    /* Feature Cards */
-    .feature-card {
-        border: none;
-        border-radius: 12px;
-        transition: transform 0.3s;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-        height: 100%;
-        background: #fff;
-    }
-    .feature-card:hover { transform: translateY(-5px); }
-    .icon-box {
-        width: 50px;
-        height: 50px;
-        background: #eef7ff;
-        border-radius: 10px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 15px;
-        color: #128cff;
-        font-size: 24px;
+    body {
+        font-family: 'Montserrat', sans-serif;
+        color: #333;
+        line-height: 1.6;
     }
 
-    .btn-rishvi {
-        background: linear-gradient(90deg, #128cff, #0066cc);
-        color: white !important;
-        padding: 12px 30px;
-        border-radius: 50px;
+    h2, h3, h4, h5 {
         font-weight: 600;
-        text-decoration: none;
+    }
+
+    .hero {
+        padding: 70px 20px;
+        background: linear-gradient(90deg, #f5fbff, #ffffff);
+    }
+
+    .hero h2 {
+        color: #1495c9;
+        font-size: 36px;
+        font-weight: 700;
+    }
+
+    .btn-main {
+        background: #128cff;
+        border: none;
+        border-radius: 6px;
+        padding: 12px 22px;
+        color: #fff;
+        font-weight: 600;
         display: inline-block;
+    }
+
+    .btn-outline {
+        border: 1px solid #128cff;
+        border-radius: 6px;
+        padding: 12px 22px;
+        font-weight: 600;
+        color: #128cff;
+        background: #fff;
+        display: inline-block;
+    }
+
+    .card-section {
+        background: #fff;
+        border-radius: 12px;
+        padding: 30px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+        margin-bottom: 30px;
+    }
+
+    .feature-list li {
+        margin-bottom: 10px;
+    }
+
+    /* Laptop Mockup */
+    .laptop-mockup {
+        width: 760px;
+        max-width: 100%;
+        margin: auto;
+        background: #111;
+        border-radius: 16px;
+        padding: 18px 18px 32px;
+        box-shadow: 0 25px 60px rgba(0,0,0,0.35);
+        position: relative;
+    }
+
+    .laptop-mockup::after {
+        content: "";
+        position: absolute;
+        bottom: -18px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 240px;
+        height: 14px;
+        background: #ccc;
+        border-radius: 0 0 20px 20px;
+    }
+
+    .laptop-mockup .screen {
+        background: #000;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    .laptop-mockup img {
+        width: 100%;
+        display: block;
+    }
+
+    .footer {
+        background: linear-gradient(90deg, #128cff, #e32bfd);
+        color: #fff;
+        padding: 45px 25px;
+        border-radius: 12px;
+        margin-top: 60px;
+    }
+
+    .footer a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    ol li {
+        margin-bottom: 10px;
     }
 </style>
 
-<div class="container-fluid rishvi-body py-5">
-    
-    <div class="text-center mb-5">
-        <img src="rishvi_logo.png" alt="Rishvi Logo" style="max-width: 150px; margin-bottom: 20px;">
-        <h1 style="font-weight: 800; font-size: 42px;">POS & Inventory <span class="text-blue">Linnworks Integration</span></h1>
-        <p class="lead text-muted">Seamlessly automate shipping, stock, and sales between Odoo and Linnworks.</p>
-    </div>
+<div class="container">
 
-    <div class="laptop-container">
-        <div class="laptop-screen">
-            <img src="demo.webp" alt="System Demo">
-        </div>
-    </div>
-
-    <section class="py-5">
+    <!-- HERO -->
+    <section class="hero">
         <div class="row align-items-center">
-            <div class="col-md-5">
-                <h2 style="font-weight: 700;">Rishvi <span class="text-blue">Inventory Operations</span></h2>
-                <p>Manage, sync, and update all inventory data between Odoo and Linnworks. Provide your warehouse team with automated tools to keep stock levels precise.</p>
-                <ul class="list-unstyled">
-                    <li><i class="fa fa-check-circle text-blue mr-2"></i> <strong>Bulk SKU Import:</strong> Single or batch sync.</li>
-                    <li><i class="fa fa-check-circle text-blue mr-2"></i> <strong>Multi-Page Sync:</strong> Define page ranges for large data.</li>
-                    <li><i class="fa fa-check-circle text-blue mr-2"></i> <strong>Real-time On-Hand:</strong> Physical inventory tracking.</li>
-                </ul>
+            <div class="col-md-6">
+                <h2>Rishvi POS & Inventory Integration</h2>
+                <p>
+                    A powerful Odoo solution integrating POS and Inventory with Linnworks.
+                    Automate stock synchronization, pricing, categories, shipping services,
+                    and real-time POS sales operations.
+                </p>
+                <a href="#features" class="btn-main">Explore Features</a>
+                <a href="#support" class="btn-outline ml-2">Contact Us</a>
             </div>
-            <div class="col-md-7">
-                <div class="row">
-                    <div class="col-md-6 mb-4">
-                        <div class="feature-card p-4">
-                            <div class="icon-box"><i class="fa fa-cubes"></i></div>
-                            <h5>Warehouse Sync</h5>
-                            <p class="small text-muted">Fetch Linnworks warehouses and map them directly to Odoo locations.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-6 mb-4">
-                        <div class="feature-card p-4">
-                            <div class="icon-box"><i class="fa fa-tags"></i></div>
-                            <h5>Category Mapping</h5>
-                            <p class="small text-muted">Automated parent-child hierarchy preservation during import.</p>
-                        </div>
-                    </div>
-                </div>
+            <div class="col-md-6 text-center">
+                <img src="hero_banner.png" alt="Rishvi POS Banner" style="max-width:100%;border-radius:14px;">
             </div>
         </div>
     </section>
 
-    <section class="py-5 bg-light-blue rounded-lg px-4">
-        <div class="text-center mb-5">
-            <h2 style="font-weight: 700;">Advanced <span class="text-blue">POS Features</span></h2>
-            <p>A smart, automated workflow designed for high-speed retail environments.</p>
-        </div>
-        <div class="row">
-            <div class="col-md-3 mb-4">
-                <div class="feature-card p-4 text-center">
-                    <i class="fa fa-truck fa-2x text-blue mb-3"></i>
-                    <h6>Shipping Services</h6>
-                    <p class="small">Linnworks shipping methods appear as clickable buttons in POS.</p>
-                </div>
-            </div>
-            <div class="col-md-3 mb-4">
-                <div class="feature-card p-4 text-center">
-                    <i class="fa fa-percent fa-2x text-blue mb-3"></i>
-                    <h6>Smart Discounts</h6>
-                    <p class="small">Apply global or per-line discounts instantly during billing.</p>
-                </div>
-            </div>
-            <div class="col-md-3 mb-4">
-                <div class="feature-card p-4 text-center">
-                    <i class="fa fa-list-alt fa-2x text-blue mb-3"></i>
-                    <h6>Dynamic Pricelists</h6>
-                    <p class="small">Sync Linnworks prices to ensure consistency across channels.</p>
-                </div>
-            </div>
-            <div class="col-md-3 mb-4">
-                <div class="feature-card p-4 text-center">
-                    <i class="fa fa-cloud-upload fa-2x text-blue mb-3"></i>
-                    <h6>Auto-Order Sync</h6>
-                    <p class="small">Orders push to Linnworks immediately with auto-generated IDs.</p>
-                </div>
+    <!-- GIF MOCKUP -->
+    <section class="my-5 text-center">
+        <h3 class="mb-4">Rishvi POS in Action</h3>
+        <div class="laptop-mockup">
+            <div class="screen">
+                <img src="pos_demo.gif" alt="Rishvi POS Demo">
             </div>
         </div>
     </section>
 
-    <section class="py-5">
+    <!-- INVENTORY OVERVIEW -->
+    <section class="my-5">
+        <div class="card-section">
+            <h3>Rishvi Inventory — Inventory Operations</h3>
+            <p>
+                Rishvi Inventory enables seamless synchronization of inventory data
+                between Odoo and Linnworks. It automates warehouse imports, category
+                management, stock updates, and bulk inventory synchronization.
+            </p>
+        </div>
+    </section>
+
+    <!-- INVENTORY FEATURES -->
+    <section id="features" class="my-5">
+        <h3 class="text-center mb-4">Inventory Synchronization Features</h3>
+
         <div class="row">
             <div class="col-md-6">
-                <h3 class="mb-4" style="font-weight: 700;">The Sales Flow</h3>
-                <div class="border-left pl-4 ml-2" style="border-width: 3px !important; border-color: #128cff !important;">
-                    <p><strong>1. Customer Selection:</strong> Link sales to existing or new records.</p>
-                    <p><strong>2. Product Add:</strong> Real-time pricing & stock lookup.</p>
-                    <p><strong>3. Shipping & Notes:</strong> Select Linnworks service & add internal instructions.</p>
-                    <p><strong>4. Validation:</strong> Secure payment and instant Linnworks order creation.</p>
+                <div class="card-section">
+                    <h4>1. Warehouse Synchronization</h4>
+                    <ul class="feature-list">
+                        <li>Imports all Linnworks warehouses into Odoo</li>
+                        <li>Creates or updates warehouse records automatically</li>
+                        <li>Maintains accurate warehouse mapping</li>
+                    </ul>
                 </div>
             </div>
+
             <div class="col-md-6">
-                <div class="p-4 rounded shadow-sm" style="background: #203038; color: #fff;">
-                    <h5><i class="fa fa-terminal mr-2"></i> Why Integrate?</h5>
-                    <hr style="border-color: rgba(255,255,255,0.1);">
-                    <p class="small">This integration eliminates manual configuration and data entry errors. It allows your retail staff to use Odoo's beautiful interface while your back-office relies on Linnworks' powerful logistics engine.</p>
-                    <a href="https://rishvi.co.uk/contact-us/" class="btn btn-outline-light btn-sm mt-2">Learn More</a>
+                <div class="card-section">
+                    <h4>2. Product Category Sync</h4>
+                    <ul class="feature-list">
+                        <li>Imports categories and subcategories</li>
+                        <li>Preserves parent–child hierarchy</li>
+                        <li>Keeps product classification consistent</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card-section">
+                    <h4>3. Add Inventory by Linn SKU</h4>
+                    <p>
+                        Manually update inventory for a specific product using its Linn SKU.
+                        Ideal for quick corrections without full sync.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card-section">
+                    <h4>4. Bulk Inventory Sync</h4>
+                    <ul class="feature-list">
+                        <li>Multi-page inventory import</li>
+                        <li>Batch-based synchronization</li>
+                        <li>Perfect for first-time setup or full refresh</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <div class="text-center py-5 border-top mt-5">
-        <h3>Ready to scale your Odoo operations?</h3>
-        <p class="text-muted mb-4">Contact Rishvi LTD for customization and support.</p>
-        <a href="mailto:info@rishvi.co.uk" class="btn-rishvi">Get Started Today</a>
-    </div>
+    <!-- POS OVERVIEW -->
+    <section class="my-5">
+        <div class="card-section">
+            <h3>Rishvi POS — Point of Sale System</h3>
+            <p>
+                Rishvi POS provides a fast, reliable, and user-friendly billing interface
+                integrated directly with inventory, accounting, and Linnworks.
+            </p>
+        </div>
+    </section>
+
+    <!-- POS FEATURES -->
+    <section class="my-5">
+        <div class="card-section">
+            <h4>Core POS Features</h4>
+            <div class="row">
+                <div class="col-md-4">Fast Product Selection & Barcode Scanning</div>
+                <div class="col-md-4">Multiple Payment Methods</div>
+                <div class="col-md-4">Automatic Inventory Updates</div>
+            </div>
+        </div>
+
+        <div class="card-section">
+            <h4>Advanced POS Features</h4>
+            <ul class="feature-list">
+                <li>Multi-session handling</li>
+                <li>Offline mode with auto-sync</li>
+                <li>Cash control and session summaries</li>
+                <li>User access control</li>
+                <li>Receipt customization</li>
+                <li>Accounting and tax integration</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- LINNWORKS INTEGRATION -->
+    <section class="my-5 text-center">
+        <div class="card-section">
+            <h3>POS with Linnworks Integration</h3>
+            <p>
+                Shipping services, discounts, pricelists, and categories are imported
+                directly from Linnworks via API. POS orders are automatically synced
+                back to Linnworks with order numbers.
+            </p>
+        </div>
+    </section>
+
+    <!-- POS FLOW -->
+    <section class="my-5">
+        <h3 class="text-center mb-4">POS Sales Flow</h3>
+        <div class="card-section">
+            <ol>
+                <li>Open POS Session</li>
+                <li>Select or Add Customer</li>
+                <li>Add Products and Apply Discounts</li>
+                <li>Select Shipping Service</li>
+                <li>Validate Order</li>
+                <li>Automatic Sync to Linnworks</li>
+            </ol>
+        </div>
+    </section>
+
+    <!-- CONCLUSION -->
+    <section class="my-5 text-center">
+        <div class="card-section">
+            <h3>Conclusion</h3>
+            <p>
+                This POS and Linnworks integration transforms retail operations into a
+                fully automated, accurate, and scalable workflow. It eliminates manual
+                configuration, improves checkout speed, and ensures complete order
+                traceability.
+            </p>
+        </div>
+    </section>
+
+    <!-- SUPPORT -->
+    <section id="support" class="my-5 text-center">
+        <div class="card-section">
+            <h3>Need Customization or Support?</h3>
+            <p>
+                Rishvi LTD delivers enterprise-grade Odoo POS and inventory solutions
+                tailored to your business workflows.
+            </p>
+            <a href="mailto:info@rishvi.co.uk" class="btn-main">Contact Rishvi</a>
+        </div>
+    </section>
 
 </div>
