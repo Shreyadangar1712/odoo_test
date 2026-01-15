@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="rishvi_pos.PosShippingTemplate">
+        <div class="o_dashboard container-fluid py-4 px-3"
+             style="max-height:100vh; overflow:auto;
+                    background: linear-gradient(135deg, #f8fafc, #eef2f6);">
+
+            <!-- Title -->
+            <h1 class="text-center mb-4"
+                style="font-weight:600; color:#2d3748;">
+                🧩 POS SHIPPING MANAGEMENT
+            </h1>
+
+            <!-- Action Cards Section -->
+            <div class="row g-3">
+
+                <!-- Import Shipping Services -->
+                <div class="col-12 col-md-6">
+                    <div class="card shadow-sm border-0 p-3 elegant-card">
+                        <h5 class="text-primary mb-2">
+                            🚚 POSTAL SERVICES
+                        </h5>
+                        <p class="text-muted mb-3">
+                            Import or Refresh POS Shipping Services From API.
+                        </p>
+                        <button type="button" class="btn btn-primary w-100"
+                                t-on-click="importShipping" t-att-disabled="loading">
+                            <t t-if="!loading"> Import Shipping Services</t>
+                            <t t-else="">⏳ Importing…</t>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Enable Discount -->
+                <div class="col-12 col-md-6">
+                    <div class="card shadow-sm border-0 p-3 elegant-card">
+                        <h5 class="text-primary mb-2">💲 DISCOUNTS</h5>
+                        <p class="text-muted mb-3">Enable Discount Feature Here.</p>
+                        <button type="button" class="btn btn-success w-100"
+                                t-on-click="enableDiscount" t-att-disabled="loading">
+                            <t t-if="!loading"> Enable Discounts</t>
+                            <t t-else="">⏳ Enabling...</t>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Enable Pricelists -->
+                <div class="col-12 col-md-6">
+                    <div class="card shadow-sm border-0 p-3 elegant-card">
+                        <h5 class="text-primary mb-2">🧾 PRICE LISTS</h5>
+                        <p class="text-muted mb-3">Enable POS Pricelists Feature.</p>
+                        <button type="button" class="btn btn-info w-100"
+                                t-on-click="enablePriceLists">
+                            <t t-if="!loading"> Enable PriceLists</t>
+                            <t t-else="">⏳ Enabling…</t>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Import Product Categories -->
+                <div class="col-12 col-md-6">
+                    <div class="card shadow-sm border-0 p-3 elegant-card">
+                        <h5 class="text-primary mb-2">🗂 PRODUCT CATEGORIES</h5>
+                        <p class="text-muted mb-3">Import Product Categories From API.</p>
+                        <button type="button" class="btn btn-warning w-100"
+                                t-on-click="getProductCaregories">
+                            <t t-if="!loading"> Import Product Categories</t>
+                            <t t-else="">⏳ Importing…</t>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </t>
+</templates>

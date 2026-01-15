@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Inherit POS Order Form -->
+    <record id="view_pos_order_form_linnworks" model="ir.ui.view">
+        <field name="name">pos.order.form.linnworks</field>
+        <field name="model">pos.order</field>
+        <field name="inherit_id" ref="point_of_sale.view_pos_pos_form"/>
+        <field name="arch" type="xml">
+
+            <!-- Insert fields after 'name' or any field you want -->
+            <xpath expr="//field[@name='name']" position="after">
+                <field name="linnworks_order_id" readonly="1"/>
+                <field name="linn_order_number" readonly="1"/>
+                <field name="linnworks_sync" readonly="1"/>
+                <field name="shippingName" readonly="1"/>
+                <field name="shipping_service_id" readonly="1"/>
+            </xpath>
+        </field>
+    </record>
+    <record id="view_pos_order_list_linnworks" model="ir.ui.view">
+        <field name="name">pos.order.list.linnworks</field>
+        <field name="model">pos.order</field>
+        <field name="inherit_id" ref="point_of_sale.view_pos_order_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//list/field[@name='session_id']" position="before">
+                <field name="linn_order_number"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

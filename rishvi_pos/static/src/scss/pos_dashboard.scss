@@ -1,0 +1,473 @@
+.elegant-card {
+                border-radius: 10px;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                overflow: hidden;
+            }
+
+            .compact-card {
+                min-height: auto !important;
+            }
+
+            .elegant-card:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 8px 15px rgba(0,0,0,0.1) !important;
+            }
+
+            .elegant-card-header {
+                border-radius: 10px 10px 0 0 !important;
+                padding: 12px 15px;
+                font-size: 1rem;
+            }
+
+            .section-header {
+                position: relative;
+            }
+
+            .section-icon {
+                color: #6c757d;
+                font-size: 1.1rem;
+            }
+
+            .section-divider {
+                height: 2px;
+                background: linear-gradient(90deg, #007bff, #6c757d);
+                width: 80px;
+                border-radius: 2px;
+                margin-top: 6px;
+            }
+
+            .btn-gradient-primary {
+                background: linear-gradient(45deg, #007bff, #0056b3);
+                border: none;
+                color: white;
+                font-weight: 500;
+                font-size: 0.9rem;
+            }
+
+            .btn-gradient-info {
+                background: linear-gradient(45deg, #17a2b8, #138496);
+                border: none;
+                color: white;
+                font-weight: 500;
+                font-size: 0.9rem;
+            }
+
+            .btn-gradient-success {
+                background: linear-gradient(45deg, #28a745, #1e7e34);
+                border: none;
+                color: white;
+                font-weight: 500;
+                font-size: 0.9rem;
+            }
+
+            .btn-gradient-warning {
+                background: linear-gradient(45deg, #ffc107, #e0a800);
+                border: none;
+                color: #212529;
+                font-weight: 500;
+                font-size: 0.9rem;
+            }
+
+            .btn-gradient-purple {
+                background: linear-gradient(45deg, #6f42c1, #59359a);
+                border: none;
+                color: white;
+                font-weight: 500;
+                font-size: 0.9rem;
+            }
+
+            .btn-gradient-indigo {
+                background: linear-gradient(45deg, #6610f2, #520dc2);
+                border: none;
+                color: white;
+                font-weight: 500;
+                font-size: 0.9rem;
+            }
+
+            .feature-icon {
+                color: #6c757d;
+                opacity: 0.8;
+            }
+
+            .stat-card {
+                background-color: rgba(248, 249, 250, 0.7);
+                transition: all 0.2s ease;
+            }
+
+            .stat-card:hover {
+                background-color: rgba(233, 236, 239, 0.9);
+                transform: scale(1.03);
+            }
+
+            .progress-container {
+                background: #f8f9fa;
+                padding: 10px;
+                border-radius: 8px;
+            }
+
+            .summary-section {
+                padding-bottom: 10px;
+                border-bottom: 1px solid #e9ecef;
+            }
+
+            .summary-section:last-of-type {
+                border-bottom: none;
+            }
+
+            .status-item {
+                padding: 5px 0;
+            }
+
+            .bg-purple {
+                background-color: #6f42c1 !important;
+            }
+
+            .bg-indigo {
+                background-color: #6610f2 !important;
+            }
+
+            /* Reduced spacing for compact layout */
+            .dashboard-header {
+                margin-bottom: 2rem !important;
+            }
+
+            .section-header {
+                margin-bottom: 1rem !important;
+            }
+
+            .card-body {
+                padding: 1rem !important;
+            }
+
+            .input-group-sm .form-control,
+            .input-group-sm .input-group-text {
+                padding: 0.25rem 0.5rem;
+                font-size: 0.875rem;
+            }
+// .elegant-card {
+//                 border-radius: 12px;
+//                 transition: transform 0.3s ease, box-shadow 0.3s ease;
+//                 overflow: hidden;
+//             }
+//
+//             .elegant-card:hover {
+//                 transform: translateY(-5px);
+//                 box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+//             }
+//
+//             .elegant-card-header {
+//                 border-radius: 12px 12px 0 0 !important;
+//                 padding: 15px 20px;
+//                 font-size: 1.1rem;
+//             }
+//
+//             .section-header {
+//                 position: relative;
+//             }
+//
+//             .section-icon {
+//                 color: #6c757d;
+//                 font-size: 1.2rem;
+//             }
+//
+//             .section-divider {
+//                 height: 3px;
+//                 background: linear-gradient(90deg, #007bff, #6c757d);
+//                 width: 100px;
+//                 border-radius: 3px;
+//                 margin-top: 8px;
+//             }
+//
+//             .btn-gradient-primary {
+//                 background: linear-gradient(45deg, #007bff, #0056b3);
+//                 border: none;
+//                 color: white;
+//                 font-weight: 500;
+//             }
+//
+//             .btn-gradient-info {
+//                 background: linear-gradient(45deg, #17a2b8, #138496);
+//                 border: none;
+//                 color: white;
+//                 font-weight: 500;
+//             }
+//
+//             .btn-gradient-success {
+//                 background: linear-gradient(45deg, #28a745, #1e7e34);
+//                 border: none;
+//                 color: white;
+//                 font-weight: 500;
+//             }
+//
+//             .btn-gradient-warning {
+//                 background: linear-gradient(45deg, #ffc107, #e0a800);
+//                 border: none;
+//                 color: #212529;
+//                 font-weight: 500;
+//             }
+//
+//             .btn-gradient-purple {
+//                 background: linear-gradient(45deg, #6f42c1, #59359a);
+//                 border: none;
+//                 color: white;
+//                 font-weight: 500;
+//             }
+//
+//             .btn-gradient-indigo {
+//                 background: linear-gradient(45deg, #6610f2, #520dc2);
+//                 border: none;
+//                 color: white;
+//                 font-weight: 500;
+//             }
+//
+//             .feature-icon {
+//                 color: #6c757d;
+//                 opacity: 0.8;
+//             }
+//
+//             .stat-card {
+//                 background-color: rgba(248, 249, 250, 0.7);
+//                 transition: all 0.2s ease;
+//             }
+//
+//             .stat-card:hover {
+//                 background-color: rgba(233, 236, 239, 0.9);
+//                 transform: scale(1.05);
+//             }
+//
+//             .progress-container {
+//                 background: #f8f9fa;
+//                 padding: 15px;
+//                 border-radius: 10px;
+//             }
+//
+//             .summary-section {
+//                 padding-bottom: 15px;
+//                 border-bottom: 1px solid #e9ecef;
+//             }
+//
+//             .summary-section:last-of-type {
+//                 border-bottom: none;
+//             }
+//
+//             .status-item {
+//                 padding: 8px 0;
+//             }
+//
+//             .bg-purple {
+//                 background-color: #6f42c1 !important;
+//             }
+//
+//             .bg-indigo {
+//                 background-color: #6610f2 !important;
+//             }
+// // rishvi_orders/static/src/scss/linn_orders_dashboard.scss
+//
+// .o_dashboard {
+//     background-color: #f8f9fa;
+//     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+//
+//     h2 {
+//         color: #2c3e50;
+//         font-weight: 700;
+//         margin-bottom: 1.5rem;
+//     }
+//
+//     // Card styling
+//     .card {
+//         border-radius: 12px;
+//         transition: all 0.3s ease;
+//
+//         &:hover {
+//             transform: translateY(-5px);
+//             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15) !important;
+//         }
+//
+//         .card-title {
+//             font-size: 1.1rem;
+//             font-weight: 600;
+//             color: #34495e;
+//         }
+//
+//         .card-body {
+//             padding: 1.5rem;
+//         }
+//     }
+//
+//     // Button styling
+//     .btn {
+//         border-radius: 8px;
+//         font-weight: 600;
+//         padding: 0.6rem 1.2rem;
+//         transition: all 0.3s ease;
+//
+//         &:hover {
+//             transform: scale(1.05);
+//             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+//         }
+//
+//         &:disabled {
+//             opacity: 0.6;
+//             cursor: not-allowed;
+//
+//             &:hover {
+//                 transform: none;
+//             }
+//         }
+//     }
+//
+//     // Progress section styling
+//     .progress-section {
+//         background: rgba(255, 255, 255, 0.2);
+//         border-radius: 10px;
+//         padding: 1.5rem;
+//         margin-top: 1rem;
+//
+//         .progress {
+//             border-radius: 15px;
+//             background-color: rgba(255, 255, 255, 0.3);
+//             overflow: hidden;
+//             box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+//
+//             .progress-bar {
+//                 font-size: 1rem;
+//                 font-weight: bold;
+//                 line-height: 30px;
+//                 transition: width 0.6s ease;
+//
+//                 &.progress-bar-animated {
+//                     animation: progress-bar-stripes 1s linear infinite;
+//                 }
+//             }
+//         }
+//     }
+//
+//     // Input field styling
+//     input[type="text"],
+//     input[type="number"] {
+//         border-radius: 8px;
+//         border: 2px solid #e0e0e0;
+//         padding: 0.75rem;
+//         font-size: 1rem;
+//         transition: all 0.3s ease;
+//
+//         &:focus {
+//             border-color: #667eea;
+//             box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+//             outline: none;
+//         }
+//     }
+//
+//     // Bulk import section
+//     .card {
+//         &[style*="linear-gradient"] {
+//             position: relative;
+//             overflow: hidden;
+//
+//             &::before {
+//                 content: '';
+//                 position: absolute;
+//                 top: -50%;
+//                 left: -50%;
+//                 width: 200%;
+//                 height: 200%;
+//                 background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+//                 animation: rotate 20s linear infinite;
+//             }
+//         }
+//     }
+//
+//     // Statistics cards
+//     .bg-primary,
+//     .bg-success {
+//         .display-4 {
+//             font-weight: 700;
+//             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+//         }
+//     }
+//
+//     // Alert styling
+//     .alert {
+//         border-radius: 8px;
+//         border: none;
+//
+//         &.alert-light {
+//             background-color: rgba(255, 255, 255, 0.9);
+//             color: #2c3e50;
+//         }
+//     }
+//
+//     // Responsive adjustments
+//     @media (max-width: 768px) {
+//         .card-body {
+//             padding: 1rem;
+//         }
+//
+//         h2 {
+//             font-size: 1.5rem;
+//         }
+//
+//         .display-4 {
+//             font-size: 2rem;
+//         }
+//     }
+// }
+//
+// // Animations
+// @keyframes rotate {
+//     from {
+//         transform: rotate(0deg);
+//     }
+//     to {
+//         transform: rotate(360deg);
+//     }
+// }
+//
+// @keyframes progress-bar-stripes {
+//     from {
+//         background-position: 1rem 0;
+//     }
+//     to {
+//         background-position: 0 0;
+//     }
+// }
+//
+// // Loading spinner
+// .fa-spinner {
+//     animation: spin 1s linear infinite;
+// }
+//
+// @keyframes spin {
+//     from {
+//         transform: rotate(0deg);
+//     }
+//     to {
+//         transform: rotate(360deg);
+//     }
+// }
+//
+// // Hover effects for info boxes
+// .bg-white.bg-opacity-25 {
+//     transition: all 0.3s ease;
+//
+//     &:hover {
+//         background-color: rgba(255, 255, 255, 0.4) !important;
+//         transform: scale(1.05);
+//     }
+// }
+//
+// // Form label styling
+// .form-label {
+//     color: #fff;
+//     margin-bottom: 0.5rem;
+//     font-size: 0.95rem;
+// }
+//
+// // Spacing utilities
+// .px-3 {
+//     h2 {
+//         padding-bottom: 0.5rem;
+//         border-bottom: 3px solid #667eea;
+//         display: inline-block;
+//     }
+// }
