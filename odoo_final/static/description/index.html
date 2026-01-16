@@ -1,457 +1,116 @@
-<!-- ==============================
-   Rishvi POS — Shift Summary
-   ============================== -->
+<div style="font-family: 'Montserrat', sans-serif; color: #333; line-height: 1.6; max-width: 1200px; margin: 0 auto; background-color: #fff;">
 
-   <style>
-    body { font-family: 'Montserrat', sans-serif; color:#333; }
-    h2, h3, h4, h5 { font-weight:600; }
-    p { line-height:1.6; }
-    .hero { padding:60px 20px; background:linear-gradient(90deg,#f5fbff,#ffffff); }
-    .hero h2 { color:#1495c9; font-size:34px; font-weight:700; }
-    .hero-subtitle { font-size:14px; letter-spacing:2px; text-transform:uppercase; color:#777; }
-    .btn-main { background:#128cff; border:none; border-radius:6px; padding:10px 20px; color:#fff !important; font-weight:600; text-decoration:none; display:inline-block; }
-    .btn-main:hover { opacity:0.9; }
-    .btn-outline { border:1px solid #128cff; border-radius:6px; padding:10px 20px; font-weight:600; color:#128cff !important; background:#fff; text-decoration:none; display:inline-block; }
-    .btn-outline:hover { background:#f5f9ff; }
-    .feature-list li { margin-bottom:8px; }
-    .card-section { background:#fff; border-radius:12px; padding:25px; box-shadow:0 8px 24px rgba(0,0,0,0.06); margin-bottom:20px; }
-    .card-soft { background:linear-gradient(135deg,#f7faff,#ffffff); border-radius:12px; padding:20px; border:1px solid #e5f0ff; }
-    .badge-pill { display:inline-block; padding:4px 10px; border-radius:999px; font-size:11px; background:#eef6ff; color:#128cff; font-weight:600; text-transform:uppercase; letter-spacing:1px; }
-    .pill-tag { display:inline-block; padding:4px 10px; border-radius:999px; font-size:11px; background:#f4f4ff; color:#555; margin:2px 4px 2px 0; }
-    .section-label { font-size:12px; text-transform:uppercase; letter-spacing:1.8px; color:#888; margin-bottom:6px; }
-    .highlight-number { font-size:26px; font-weight:700; color:#128cff; }
-    .mini-label { font-size:12px; text-transform:uppercase; letter-spacing:1px; color:#888; }
-
-    .screenshot { border-radius:8px; border:1px solid #eee; padding:5px; margin-bottom:15px; background:#fff; }
-    .flow-number { width:26px; height:26px; border-radius:50%; background:#128cff; color:#fff; display:flex; align-items:center; justify-content:center; font-size:13px; font-weight:600; margin-right:8px; }
-    .flow-step { display:flex; align-items:flex-start; margin-bottom:12px; }
-    .flow-step p { margin:0; }
-
-    .gradient-card { background:linear-gradient(135deg,#128cff0f,#e32bfd08); border-radius:12px; padding:16px 18px; border:1px solid #e4e6ff; }
-    .divider { height:1px; background:rgba(0,0,0,0.04); margin:20px 0; }
-
-    .footer { background:linear-gradient(90deg,#128cff,#e32bfd); color:#fff; padding:40px 20px; border-radius:10px; margin-top:50px; }
-    .footer a { color:#fff; text-decoration:none; }
-    .footer a:hover { text-decoration:underline; }
-    .social a { margin-right:10px; }
-
-    @media (max-width: 767.98px) {
-        .hero { text-align:center; }
-        .hero .col-md-6.text-left { text-align:center !important; margin-bottom:25px; }
-    }
-</style>
-
-<div class="container">
-
-    <!-- TOP BAR -->
-    <div class="d-flex justify-content-between align-items-center py-3 border-bottom">
-        <div class="d-flex align-items-center">
-            <a href="https://rishvi.co.uk/">
-                <img src="rishvi_logo.png" alt="Rishvi logo"
-                     style="width:80px;height:80px;object-fit:contain;border:1px solid #ddd;border-radius:8px;">
-            </a>
-            <div class="ml-3">
-                <h4 style="margin:0;">Rishvi LTD</h4>
-                <div style="font-size:13px;color:#777;">Odoo POS & Inventory Experts</div>
-                <div style="margin-top:4px;">
-                    <span class="pill-tag">Odoo 18</span>
-                    <span class="pill-tag">POS</span>
-                    <span class="pill-tag">Linnworks Integration</span>
-                </div>
+    <div style="display: flex; justify-content: space-between; align-items: center; padding: 20px; border-bottom: 2px solid #f0f4f8;">
+        <div style="display: flex; align-items: center;">
+            <img src="rishvi_logo.png" alt="Rishvi Logo" style="width: 70px; height: 70px; border-radius: 10px; margin-right: 15px; border: 1px solid #eee;">
+            <div>
+                <h2 style="margin: 0; color: #128cff; font-size: 24px; font-weight: 700;">RISHVI LTD</h2>
+                <p style="margin: 0; color: #777; font-size: 14px;">Official Odoo & Linnworks Integration Experts</p>
             </div>
         </div>
-        <div>
-            <span class="btn btn-sm" style="background:#203038;color:#fff;font-weight:500;">Community</span>
-            <span class="btn btn-sm" style="background:#203038;color:#fff;font-weight:500;">Enterprise</span>
+        <div style="display: flex; gap: 10px;">
+            <span style="background: #eef2f7; padding: 5px 15px; border-radius: 20px; font-size: 12px; font-weight: 600; color: #128cff;">v18 Enterprise</span>
+            <span style="background: #eef2f7; padding: 5px 15px; border-radius: 20px; font-size: 12px; font-weight: 600; color: #128cff;">Community</span>
         </div>
     </div>
 
-    <!-- HERO SECTION -->
-    <section class="hero">
-        <div class="row align-items-center">
-            <div class="col-md-6 text-left">
-                <div class="hero-subtitle">RISHVI POS • SHIFT & INVENTORY INTELLIGENCE</div>
-                <h2 class="mt-2">POS Shift Summary &amp; Linnworks Integration</h2>
-                <p>
-                    Turn every POS session into a clear, trusted story.<br>
-                    Track shift-level KPIs, payment mix, cash control, and automatically sync orders
-                    and inventory with <strong>Linnworks</strong> — directly inside Odoo 18.
-                </p>
-
-                <div class="row mt-3">
-                    <div class="col-4">
-                        <div class="mini-label">Sessions / day</div>
-                        <div class="highlight-number">∞</div>
-                    </div>
-                    <div class="col-4">
-                        <div class="mini-label">KPIs / shift</div>
-                        <div class="highlight-number">10+</div>
-                    </div>
-                    <div class="col-4">
-                        <div class="mini-label">Integrations</div>
-                        <div class="highlight-number">Odoo + Linnworks</div>
-                    </div>
-                </div>
-
-                <div class="mt-4">
-                    <a href="#features" class="btn-main mr-2">See Features</a>
-                    <a href="#integration" class="btn-outline">POS + Linnworks Flow</a>
-                </div>
-            </div>
-
-            <div class="col-md-6 text-center mt-4 mt-md-0">
-                <img src="hero_banner.png" alt="POS Shift Summary Banner"
-                     style="max-width:100%;border-radius:12px;">
-                <div class="gradient-card mt-3 text-left">
-                    <div class="section-label">Why Rishvi POS</div>
-                    <p style="margin-bottom:6px;">
-                        ✔ Shift-wise sales KPIs, refunds, taxes, and payment methods in one view.
-                    </p>
-                    <p style="margin-bottom:0;">
-                        ✔ Orders, stock, prices, and shipping synced with Linnworks — no more double entry.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- QUICK VALUE STRIP -->
-    <section class="my-4">
-        <div class="row">
-            <div class="col-md-4 mb-3">
-                <div class="card-soft h-100">
-                    <div class="section-label">For Store Managers</div>
-                    <h5>Shift clarity in seconds</h5>
-                    <p>See total sales, net sales, taxes, refunds, and cash difference per shift.
-                        No spreadsheets, no manual calculations.</p>
-                </div>
-            </div>
-            <div class="col-md-4 mb-3">
-                <div class="card-soft h-100">
-                    <div class="section-label">For Accountants</div>
-                    <h5>Clean, trusted numbers</h5>
-                    <p>Payment breakdown by method, automatic posting to journals, and precise
-                        end-of-day summaries that match cash and bank.</p>
-                </div>
-            </div>
-            <div class="col-md-4 mb-3">
-                <div class="card-soft h-100">
-                    <div class="section-label">For Operations</div>
-                    <h5>Real-time inventory &amp; pricing</h5>
-                    <p>Products, categories, prices and shipping services are synced from Linnworks
-                        — your POS always uses live business configuration.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CORE POS SHIFT SUMMARY FEATURES -->
-    <section id="features" class="my-5">
-        <div class="card-section">
-            <h3>POS Shift Summary — Overview</h3>
-            <p>
-                The <strong>POS Shift Summary</strong> module helps managers and accountants
-                review POS operations at the end of each session. Automatically track sales,
-                taxes, refunds, average ticket size, session duration, and payment methods
-                (cash, bank, card, others) in a single dashboard.
-            </p>
-
-            <div class="divider"></div>
-
-            <div class="row">
-                <div class="col-md-6">
-                    <h4>Key Shift Features</h4>
-                    <ul class="feature-list">
-                        <li>📊 <strong>Shift Dashboard</strong> with total sales, taxes, refunds, and net totals.</li>
-                        <li>💰 <strong>Payment Breakdown</strong> by method (Cash, Bank, Card, Other).</li>
-                        <li>🕒 <strong>Session Duration</strong> tracking (start &amp; closing times).</li>
-                        <li>📦 <strong>Linked POS Orders</strong> and refund history directly accessible.</li>
-                        <li>📈 KPIs like <strong>Net Sales</strong> and <strong>Average Ticket Size</strong>.</li>
-                        <li>🔁 <strong>Easy navigation</strong> between shift summary and detailed order reports.</li>
-                        <li>✅ <strong>Session end-of-day summary</strong> with totals, methods, and cash difference.</li>
-                    </ul>
-                </div>
-                <div class="col-md-6">
-                    <h4>Advanced POS Capabilities</h4>
-                    <ul class="feature-list">
-                        <li>🧾 <strong>Multi-session handling</strong> — multiple terminals, each with its own shift.</li>
-                        <li>🌐 <strong>Offline mode</strong> — keep selling, sync when back online.</li>
-                        <li>💵 <strong>Cash control</strong> — opening/closing balance and cash movement tracking.</li>
-                        <li>🏷️ <strong>Discounts &amp; promotions</strong> — per line or global order discounts.</li>
-                        <li>📠 <strong>Barcode scanning</strong> for fast product selection.</li>
-                        <li>👥 <strong>User access control</strong> — limit who can discount, refund or close sessions.</li>
-                        <li>🧮 <strong>Tax &amp; accounting integration</strong> — automatic postings to journals.</li>
-                        <li>🧾 <strong>Receipt customization</strong> — logo, contact, terms, QR / barcodes.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SCREENSHOTS -->
-    <section id="screenshots" class="my-5">
-        <h3 class="mb-4 text-center">Screenshots</h3>
-        <p class="text-center" style="max-width:750px;margin:0 auto 25px;">
-            Get a visual overview of how Rishvi POS Shift Summary centralizes all key metrics and
-            shortcuts for your daily operations.
+    <div style="background: linear-gradient(135deg, #f5fbff 0%, #ffffff 100%); padding: 60px 40px; text-align: center; border-radius: 0 0 50px 50px;">
+        <h1 style="color: #1495c9; font-size: 42px; font-weight: 800; margin-bottom: 20px;">POS & Inventory Shift Summary</h1>
+        <p style="font-size: 18px; color: #555; max-width: 800px; margin: 0 auto 30px;">
+            The ultimate bridge between <strong>Odoo POS</strong> and <strong>Linnworks</strong>. 
+            Automate inventory sync, track shift performance, and manage multi-warehouse operations seamlessly.
         </p>
-        <div class="row">
-            <div class="col-md-3 text-center mb-3">
-                <img src="pos_shift_summary_dashboard.png" alt="Shift Summary Dashboard"
-                     class="screenshot w-100">
-                <p><strong>Dashboard</strong><br><small>One glance view of your entire shift.</small></p>
+        <div>
+            <a href="#contact" style="background: #128cff; color: #fff; padding: 15px 35px; text-decoration: none; border-radius: 8px; font-weight: 700; display: inline-block; margin-right: 15px; box-shadow: 0 4px 15px rgba(18, 140, 255, 0.3);">Get Started</a>
+            <a href="https://rishvi.co.uk/" style="border: 2px solid #128cff; color: #128cff; padding: 13px 35px; text-decoration: none; border-radius: 8px; font-weight: 700; display: inline-block;">View Website</a>
+        </div>
+    </div>
+
+    <div style="padding: 50px 20px; text-align: center;">
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px;">
+            <div style="flex: 1; min-width: 200px; padding: 20px; background: #fff; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+                <h2 style="color: #128cff; font-size: 40px; margin: 0;">20+</h2>
+                <p style="color: #666; font-weight: 600;">Global Clients & Projects</p>
             </div>
-            <div class="col-md-3 text-center mb-3">
-                <img src="pos_shift_summary_form.png" alt="Shift Summary Form"
-                     class="screenshot w-100">
-                <p><strong>Form View</strong><br><small>Detailed shift and session metadata.</small></p>
+            <div style="flex: 1; min-width: 200px; padding: 20px; background: #fff; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+                <h2 style="color: #e32bfd; font-size: 40px; margin: 0;">100%</h2>
+                <p style="color: #666; font-weight: 600;">Data Accuracy (Sync)</p>
             </div>
-            <div class="col-md-3 text-center mb-3">
-                <img src="pos_shift_summary_orders.png" alt="POS Orders Linked"
-                     class="screenshot w-100">
-                <p><strong>Linked Orders</strong><br><small>Jump from summary to exact orders.</small></p>
-            </div>
-            <div class="col-md-3 text-center mb-3">
-                <img src="pos_shift_summary_kpi.png" alt="Shift KPIs"
-                     class="screenshot w-100">
-                <p><strong>KPI View</strong><br><small>Key performance indicators per shift.</small></p>
+            <div style="flex: 1; min-width: 200px; padding: 20px; background: #fff; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+                <h2 style="color: #1495c9; font-size: 40px; margin: 0;">24/7</h2>
+                <p style="color: #666; font-weight: 600;">Dedicated Support</p>
             </div>
         </div>
-    </section>
+    </div>
 
-    <!-- FLOW IMAGE -->
-    <section class="my-5 text-center">
-        <img src="pos_shift_summary_flow.png" alt="POS Shift Summary Flow"
-             style="max-width:100%;border-radius:12px;">
-    </section>
-
-    <!-- RISHVI INVENTORY MODULE HIGHLIGHTS -->
-    <section class="my-5" id="inventory">
-        <div class="card-section">
-            <div class="section-label">Rishvi Inventory — Inventory Operations</div>
-            <h3>Unified Inventory Between Odoo &amp; Linnworks</h3>
-            <p>
-                <strong>Rishvi Inventory</strong> allows you to manage, sync, and update all inventory data
-                between Odoo and Linnworks. Import warehouses, categories, product quantities, and bulk
-                inventory in a structured, automated way.
-            </p>
-
-            <div class="row mt-3">
-                <div class="col-md-4 mb-3">
-                    <h5>1. Product Import</h5>
-                    <ul class="feature-list">
-                        <li>🔄 <strong>Sync Warehouses</strong> from Linnworks into Odoo.</li>
-                        <li>🏷️ <strong>Sync Product Categories</strong> with full parent–child hierarchy.</li>
-                        <li>🔗 Warehouse &amp; category IDs are mapped for future operations.</li>
-                        <li>✔ Ideal when adding new warehouses or reorganizing categories.</li>
-                    </ul>
-                </div>
-                <div class="col-md-4 mb-3">
-                    <h5>2. Add Inventory by Linn SKU</h5>
-                    <ul class="feature-list">
-                        <li>Enter a <strong>Linnworks SKU</strong> and click “Add”.</li>
-                        <li>Rishvi fetches inventory details from Linnworks.</li>
-                        <li>Updates the corresponding product quantities in Odoo.</li>
-                        <li>✔ Perfect for quick corrections or single-product updates.</li>
-                    </ul>
-                </div>
-                <div class="col-md-4 mb-3">
-                    <h5>3. Bulk Inventory Sync</h5>
-                    <ul class="feature-list">
-                        <li>Compare <strong>Inventories in Rishvi</strong> vs. <strong>Inventories in Linnworks</strong>.</li>
-                        <li>“Refresh Inventory” recalculates counts and differences.</li>
-                        <li><strong>Sync All Inventory</strong> with multi-page imports (e.g., pages 1–20).</li>
-                        <li>✔ Best for first-time setup or full system refresh.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="divider"></div>
-
-            <div class="row">
-                <div class="col-md-4 mb-3">
-                    <h5>On-hand Quantity</h5>
-                    <p>
-                        <strong>On-hand quantity</strong> represents the current physical inventory available
-                        for a product in your warehouse. It’s the real-time count of items physically present
-                        and available for sale or use.
-                    </p>
-                </div>
-                <div class="col-md-4 mb-3">
-                    <h5>Product Categories</h5>
-                    <p>
-                        Manage and organize all product categories coming from Linnworks or created in Rishvi.
-                        Categories ensure better reporting, syncing, and stock updates with correct mapping.
-                    </p>
-                    <ul class="feature-list">
-                        <li>Organize products and apply valuation &amp; costing rules.</li>
-                        <li>Preserve parent–child hierarchy on sync.</li>
-                        <li>Quickly filter products and maintain consistent classification.</li>
-                    </ul>
-                </div>
-                <div class="col-md-4 mb-3">
-                    <h5>Warehouses &amp; Pricelists</h5>
-                    <ul class="feature-list">
-                        <li>📍 Manage warehouse locations synced from Linnworks.</li>
-                        <li>📦 Ensure correct stock allocation across multiple warehouses.</li>
-                        <li>💳 Sync and manage <strong>pricelists</strong> with flexible pricing rules.</li>
-                        <li>Set currencies, discounts, markups and customer-specific pricing.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- POS + LINNWORKS INTEGRATION FLOW -->
-    <section class="my-5" id="integration">
-        <div class="card-section">
-            <div class="section-label">POS with Linnworks Integration</div>
-            <h3>From Counter to Linnworks — End-to-End Flow</h3>
-            <p>
-                We integrated Odoo POS with <strong>Linnworks</strong> to automate and synchronize key data:
-                shipping services, product categories, pricelists, discounts and more. Instead of manually
-                configuring these in POS, everything is fetched via API from Linnworks — ensuring that your POS
-                uses the same configuration as your central operations.
-            </p>
-
-            <div class="row mt-3">
-                <div class="col-md-6 mb-3">
-                    <h4>POS Configuration Dashboard</h4>
-                    <ul class="feature-list">
-                        <li>📦 <strong>Import Shipping Services</strong> from Linnworks for POS use.</li>
-                        <li>🏷️ <strong>Import Product Categories</strong> to structure POS product tiles.</li>
-                        <li>💳 <strong>Enable Pricelists</strong> to show different prices by customer/season.</li>
-                        <li>💸 <strong>Enable Discounts</strong> for line-level or order-level promotions.</li>
-                        <li>All features are accessible from a <strong>card-based dashboard</strong> for admins.</li>
-                    </ul>
-                    <p class="mt-2">
-                        <em>Tip:</em> In POS settings, avoid enabling <strong>“Restrict Categories”</strong> so all
-                        synced categories remain visible in POS.
-                    </p>
-                </div>
-
-                <div class="col-md-6 mb-3">
-                    <h4>POS Sales Flow with Linnworks</h4>
-                    <div class="flow-step">
-                        <div class="flow-number">1</div>
-                        <p><strong>Open POS Session</strong><br>Cashier starts a new session to begin billing.</p>
-                    </div>
-                    <div class="flow-step">
-                        <div class="flow-number">2</div>
-                        <p><strong>Select / Add Customer</strong><br>Link the sale to a customer for better tracking.</p>
-                    </div>
-                    <div class="flow-step">
-                        <div class="flow-number">3</div>
-                        <p><strong>Add Products to Cart</strong><br>Products, prices &amp; categories come from Odoo,
-                           synced with Linnworks.</p>
-                    </div>
-                    <div class="flow-step">
-                        <div class="flow-number">4</div>
-                        <p><strong>Apply Discounts &amp; Add Notes</strong><br>Apply configured discounts and internal notes if needed.</p>
-                    </div>
-                    <div class="flow-step">
-                        <div class="flow-number">5</div>
-                        <p><strong>Select Shipping Service</strong><br>Shipping services from Linnworks appear as quick-select buttons.</p>
-                    </div>
-                    <div class="flow-step">
-                        <div class="flow-number">6</div>
-                        <p><strong>Validate Order</strong><br>Once details are confirmed, the order is validated in POS.</p>
-                    </div>
-                    <div class="flow-step">
-                        <div class="flow-number">7</div>
-                        <p><strong>Automatic Sync to Linnworks</strong><br>
-                           The order is sent to Linnworks and a <strong>Linnworks Order Number</strong> is stored in Odoo.</p>
-                    </div>
-                    <div class="flow-step">
-                        <div class="flow-number">8</div>
-                        <p><strong>Order Verification</strong><br>
-                           Operations can search in Linnworks by that Order Number and verify all details: products, customer,
-                           discounts, notes and shipping.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="gradient-card mt-3">
-                <h5>Business Benefits</h5>
-                <ul class="feature-list">
-                    <li>🚀 Faster checkout and configuration-free POS deployment.</li>
-                    <li>✅ No double-entry — prices, categories and shipping come from Linnworks.</li>
-                    <li>🔍 Full traceability — Linnworks Order Number links every POS sale to the backend.</li>
-                    <li>📉 Fewer human errors and a much more transparent retail workflow.</li>
+    <div style="padding: 40px 20px;">
+        <h3 style="text-align: center; font-size: 28px; color: #333; margin-bottom: 40px; border-bottom: 3px solid #128cff; display: table; margin-left: auto; margin-right: auto; padding-bottom: 10px;">Advanced Linnworks Integration</h3>
+        
+        <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+            <div style="flex: 1; min-width: 340px; border: 1px solid #e1e8ed; border-radius: 12px; padding: 25px; background: #fcfdfe;">
+                <div style="font-size: 30px; margin-bottom: 15px;">📦</div>
+                <h4 style="color: #128cff; margin-top: 0;">Inventory Operations</h4>
+                <ul style="padding-left: 20px; color: #555; font-size: 14px;">
+                    <li style="margin-bottom: 8px;"><strong>Sync Warehouse:</strong> Fetch and map Linnworks warehouse IDs automatically.</li>
+                    <li style="margin-bottom: 8px;"><strong>Bulk Import:</strong> Multi-page dynamic imports (e.g., sync 600+ products in one click).</li>
+                    <li style="margin-bottom: 8px;"><strong>SKU Adjustments:</strong> Update specific stock levels by Linn SKU instantly.</li>
                 </ul>
             </div>
 
-            <p class="mt-3">
-                <strong>Conclusion:</strong> With this integration, retail billing becomes an automated,
-                accurate and highly efficient workflow — from scanning products at the counter to tracking the
-                same order inside Linnworks.
-            </p>
-        </div>
-    </section>
-
-    <!-- SUPPORT / CUSTOMIZATION -->
-    <section id="support" class="my-5">
-        <div class="card-section text-center">
-            <h3>Need Customization or Extra KPIs?</h3>
-            <p style="max-width:700px;margin:auto;">
-                Want additional KPIs, custom dashboards, or deeper accounting and Linnworks integration?
-                Our team at <strong>Rishvi Ltd</strong> specializes in Odoo POS, Inventory and
-                Linnworks-based workflows. We can extend the <em>POS Shift Summary</em> module to match
-                your exact business process.
-            </p>
-            <div class="mt-3">
-                <a href="mailto:info@rishvi.co.uk" class="btn-main mr-2">Contact Us</a>
-                <a href="https://rishvi.co.uk/contact-us/" target="_blank" class="btn-outline">Visit Website</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <section class="footer">
-        <div class="row">
-            <div class="col-md-3 mb-3">
-                <img src="/pos_shift_summary/static/description/rishvi_logo.png" alt="Rishvi logo"
-                     style="max-width:140px;">
-                <p class="mt-3">We simplify Odoo POS and Inventory reporting with smart dashboards, Linnworks integrations, and automation.</p>
-                <div class="social mt-3">
-                    <a href="https://facebook.com/rishviltd" target="_blank"><i class="fa fa-facebook"></i></a>
-                    <a href="https://x.com/rishviltd" target="_blank"><i class="fa fa-twitter"></i></a>
-                    <a href="https://linkedin.com/company/rishvi-ltd" target="_blank"><i class="fa fa-linkedin"></i></a>
-                    <a href="https://instagram.com/rishviltd" target="_blank"><i class="fa fa-instagram"></i></a>
-                </div>
-            </div>
-
-            <div class="col-md-3 mb-3">
-                <h5>Quick Links</h5>
-                <ul style="list-style:none;padding:0;">
-                    <li><a href="https://rishvi.co.uk/">Home</a></li>
-                    <li><a href="https://rishvi.co.uk/about-us/">About Us</a></li>
-                    <li><a href="https://rishvi.co.uk/services/">Services</a></li>
-                    <li><a href="https://rishvi.co.uk/contact-us/">Contact Us</a></li>
+            <div style="flex: 1; min-width: 340px; border: 1px solid #e1e8ed; border-radius: 12px; padding: 25px; background: #fcfdfe;">
+                <div style="font-size: 30px; margin-bottom: 15px;">🏪</div>
+                <h4 style="color: #128cff; margin-top: 0;">POS Sales Flow</h4>
+                <ul style="padding-left: 20px; color: #555; font-size: 14px;">
+                    <li style="margin-bottom: 8px;"><strong>Shipping Services:</strong> Pull Linnworks shipping methods directly into POS buttons.</li>
+                    <li style="margin-bottom: 8px;"><strong>Automated Sync:</strong> Validated orders generate a Linnworks Order Number instantly.</li>
+                    <li style="margin-bottom: 8px;"><strong>Offline Mode:</strong> Transactions sync automatically once connection returns.</li>
                 </ul>
             </div>
+        </div>
+    </div>
 
-            <div class="col-md-3 mb-3">
-                <h5>Contact</h5>
-                <p><i class="fa fa-whatsapp"></i> +44 20 8050 3432</p>
-                <p><i class="fa fa-envelope"></i> info@rishvi.co.uk</p>
-                <p><i class="fa fa-phone"></i> 0753 667 7692</p>
+    <div style="margin: 40px 20px; background: #203038; border-radius: 20px; padding: 40px; color: #fff;">
+        <div style="display: flex; flex-wrap: wrap; align-items: center;">
+            <div style="flex: 1; min-width: 300px; padding-right: 20px;">
+                <h3 style="color: #fff; font-size: 26px;">Shift Summary Dashboard</h3>
+                <p style="color: #ccc;">Monitor your performance with real-time KPIs specifically designed for Odoo 18.</p>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 20px;">
+                    <div style="background: rgba(255,255,255,0.1); padding: 10px; border-radius: 8px;">📊 Net Sales</div>
+                    <div style="background: rgba(255,255,255,0.1); padding: 10px; border-radius: 8px;">💰 Tax Breakdown</div>
+                    <div style="background: rgba(255,255,255,0.1); padding: 10px; border-radius: 8px;">🕒 Session Tracking</div>
+                    <div style="background: rgba(255,255,255,0.1); padding: 10px; border-radius: 8px;">📈 Ticket Size</div>
+                </div>
             </div>
-
-            <div class="col-md-3 mb-3 text-center">
-                <img src="/pos_shift_summary/static/description/odoo_partner.png"
-                     alt="Odoo Partner" style="max-width:160px;">
+            <div style="flex: 1; min-width: 300px; text-align: center;">
+                <img src="pos_shift_summary_dashboard.png" alt="Dashboard View" style="max-width: 100%; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
             </div>
         </div>
+    </div>
 
-        <hr style="border-color:rgba(255,255,255,0.3);">
-        <div class="d-flex justify-content-between flex-wrap">
-            <p class="mb-1">© 2025 Rishvi LTD. All Rights Reserved.</p>
-            <p class="mb-1">
-                <a href="https://rishvi.co.uk/privacy-policy/">Privacy Policy</a> |
-                <a href="https://rishvi.co.uk/terms-conditions/">Terms &amp; Conditions</a>
-            </p>
+    <div id="contact" style="padding: 60px 20px; text-align: center; background-color: #f8f9fa; border-radius: 20px;">
+        <h3 style="font-size: 28px; margin-bottom: 15px;">Ready to Scale Your Retail Business?</h3>
+        <p style="max-width: 700px; margin: 0 auto 30px; color: #666;">
+            We specialize in extending Odoo to fit complex business needs. Our team can customize this module to include extra KPIs, deep accounting integration, or custom shipping logic.
+        </p>
+        <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 15px;">
+            <a href="mailto:info@rishvi.co.uk" style="background: #128cff; color: #fff; padding: 15px 40px; text-decoration: none; border-radius: 8px; font-weight: 700;">Contact Us</a>
+            <a href="https://rishvi.co.uk/contact-us/" style="background: #fff; color: #128cff; border: 1px solid #128cff; padding: 15px 40px; text-decoration: none; border-radius: 8px; font-weight: 700;">Free Consultation</a>
         </div>
-    </section>
+        
+        <div style="margin-top: 40px; display: flex; justify-content: center; gap: 40px; font-size: 14px; color: #555;">
+            <span>📞 0753 667 7692</span>
+            <span>💬 +44 20 8050 3432</span>
+            <span>📧 info@rishvi.co.uk</span>
+        </div>
+    </div>
+
+    <div style="background: linear-gradient(90deg, #128cff 0%, #e32bfd 100%); padding: 30px; color: #fff; text-align: center; border-radius: 20px 20px 0 0; margin-top: 50px;">
+        <p style="margin: 0; font-weight: 600;">© 2025 Rishvi LTD. Your Partner in Odoo Excellence.</p>
+        <div style="margin-top: 10px;">
+            <a href="https://rishvi.co.uk" style="color: #fff; text-decoration: none; margin: 0 10px; opacity: 0.8;">Home</a> |
+            <a href="https://rishvi.co.uk/services/" style="color: #fff; text-decoration: none; margin: 0 10px; opacity: 0.8;">Services</a> |
+            <a href="https://rishvi.co.uk/privacy-policy/" style="color: #fff; text-decoration: none; margin: 0 10px; opacity: 0.8;">Privacy Policy</a>
+        </div>
+    </div>
 
 </div>
