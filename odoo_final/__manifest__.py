@@ -12,7 +12,7 @@
         Point Of Sale Linnworks Integration
     """,
     "author": "Rishvi ltd",
-    "website": "https://rishvi.co.uk",
+    "website": "https://rishvi.co.uk/",
     "data": [
         'security/ir.model.access.csv',
         'views/pos_order_views.xml',
