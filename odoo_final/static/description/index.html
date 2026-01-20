@@ -418,32 +418,37 @@
     
 <!-- VIDEO WRAPPER -->
 <a href="https://www.youtube.com/watch?v=5d81A9bEM_c&t=211s"
-target="_blank"
-style="display:inline-block; position:relative; max-width:1000px; width:100%;">
+   target="_blank"
+   style="display:inline-block; max-width:1000px; width:100%;">
 
- <!-- POSTER -->
- <img src="poster-youtube.jpg"
-      alt="POS Demo Video"
-      style="
-         width:100%;
-         border-radius:18px;
-         display:block;
-      ">
+    <!-- RELATIVE CONTAINER (FIX) -->
+    <div style="position:relative; width:100%;">
 
- <!-- YOUTUBE ICON (ON TOP) -->
- <img src="YouTube_full-color_icon_(2017).svg.png"
-      alt="Play Video"
-      style="
-         position:absolute;
-         top:50%;
-         left:50%;
-         transform:translate(-50%, -50%);
-         width:90px;
-         height:auto;
-         margin-top: -610px;
-      ">
+        <!-- POSTER -->
+        <img src="poster-youtube.jpg"
+             alt="POS Demo Video"
+             style="
+                width:100%;
+                border-radius:18px;
+                display:block;
+             ">
 
+        <!-- YOUTUBE ICON (CENTERED ON POSTER) -->
+        <img src="YouTube_full-color_icon_(2017).svg.png"
+             alt="Play Video"
+             style="
+                position:absolute;
+                top:50%;
+                left:50%;
+                transform:translate(-50%, -50%);
+                width:90px;
+                height:auto;
+                z-index:2;
+             ">
+
+    </div>
 </a>
+
 
     </div>
     
