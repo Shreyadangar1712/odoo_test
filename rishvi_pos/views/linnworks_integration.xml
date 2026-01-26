@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_linnworks_config_form" model="ir.ui.view">
+        <field name="name">linnworks.integration.form</field>
+        <field name="model">linnworks.integration</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="application_id"/>
+                        <field name="application_secret"/>
+                        <field name="auth_token" required="1"/>
+                        <field name="instance_token"/>
+                        <field name="server_url"/>
+                        <field name="warehouse_id"/>
+                        <field name="product_import_qty"/>
+                    </group>
+                    <group>
+                        <button name="action_test_linnworks_connection"
+                                string="Test Linnworks Connection"
+                                type="object"
+                                class="btn-primary"
+                                icon="fa-plug"/>
+                    </group>
+
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="view_linnworks_config_list" model="ir.ui.view">
+        <field name="name">linnworks.integration.list</field>
+        <field name="model">linnworks.integration</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="application_id"/>
+                <field name="application_secret"/>
+                <field name="auth_token" required="1"/>
+                <field name="instance_token"/>
+                <field name="server_url"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="action_linnworks_config" model="ir.actions.act_window">
+        <field name="name">Linnworks Configuration</field>
+        <field name="res_model">linnworks.integration</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <menuitem id="linnworks_menu_root" name="Linnworks Configuration"
+              parent="base.menu_custom" sequence="10"/>
+
+    <menuitem id="menu_linnworks_config"
+              name="Linnworks Config"
+              parent="linnworks_menu_root"
+              action="action_linnworks_config"
+              sequence="999"/>
+
+    <!-- Scheduled Action -->
+    <record id="ir_cron_import_linnworks" model="ir.cron">
+        <field name="name">Import Linnworks Products</field>
+        <field name="model_id" ref="model_linnworks_integration"/>
+        <field name="state">code</field>
+        <field name="code">model.search([], limit=1).import_products()</field>
+        <field name="interval_number">5</field>
+        <field name="interval_type">minutes</field>
+    </record>
+</odoo>

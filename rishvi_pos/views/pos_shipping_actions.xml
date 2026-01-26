@@ -1,0 +1,15 @@
+<!-- pos_shipping_dashboard/views/pos_shipping_actions.xml -->
+<odoo>
+    <!-- client action (OWL) -->
+    <record id="action_pos_shipping_dashboard" model="ir.actions.client">
+        <field name="name">POS Shipping</field>
+        <field name="tag">pos_shipping_dashboard</field>
+    </record>
+
+    <!-- menu: put it under Orders menu (change parent if needed) -->
+    <menuitem id="menu_pos_shipping_root"
+              name="POS Operations"
+              sequence="20"
+              parent="rishvi_pos.pos_shipping_services_menu_catalog"
+              action="action_pos_shipping_dashboard"/>
+</odoo>

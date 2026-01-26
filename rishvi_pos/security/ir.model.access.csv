@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+rishvi_pos.access_pos_shipping_services,access_pos_shipping_services,rishvi_pos.model_pos_shipping_services,base.group_user,1,1,1,1
+rishvi_pos.access_import_shipping_services_wizard,access_import_shipping_services_wizard,rishvi_pos.model_import_shipping_services_wizard,base.group_user,1,1,1,1
+rishvi_pos.access_rishvi_dashboard_discount,access_rishvi_dashboard_discount,rishvi_pos.model_rishvi_dashboard_discount,base.group_user,1,1,1,1
+

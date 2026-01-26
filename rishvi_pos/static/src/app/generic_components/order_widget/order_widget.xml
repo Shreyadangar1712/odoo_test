@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="rishvi_pos.OrderWidget" t-inherit="point_of_sale.OrderWidget" t-inherit-mode="extension"
+       owl="1">
+        <xpath expr="//div[hasclass('order-summary')]/div[hasclass('tax-info')]" position="after">
+            <div class="shipping-service-display mt-2">
+                <t t-if="shippingService">
+                    <div class="shipping-service-info subentry d-flex justify-content-between w-100 fs-6 text-muted"
+                    >
+                        Shipping Service: <span t-esc="shippingService.name"/>
+                        <div id="order-widget-services">
+                            <t t-if="taxTotals.currency_id">
+                              <span t-esc="formatMonetary(shippingService.amount, {currencyId: taxTotals.currency_id})"/>
+                            </t>
+                            <t t-else="">
+                              <span t-esc="shippingService.amount.toFixed(2)"/>
+                            </t>
+                        </div>
+                    </div>
+                </t>
+            </div>
+        </xpath>
+        <xpath expr="//div[hasclass('order-summary')]/div[hasclass('fs-2')]" position="replace">
+            <div class="d-flex justify-content-between w-100 fs-2">
+                        Total
+                <t t-set="BaseTotal" t-value="taxTotals.order_total"/>
+                <t t-if="shippingService">
+                    <t t-set="Total" t-value="BaseTotal + shippingService.amount"/>
+                </t>
+                <t t-else="">
+                    <t t-set="Total" t-value="BaseTotal"/>
+                </t>
+                <span t-esc="formatMonetary(taxTotals.order_sign * Total, {currencyId: taxTotals.currency_id})"
+                      class="total"/>
+            </div>
+        </xpath>
+    </t>
+</templates>
