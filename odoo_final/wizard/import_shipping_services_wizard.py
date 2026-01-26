@@ -27,15 +27,12 @@ class ImportShippingServiceWizard(models.TransientModel):
                 "appName": rishvi_app,
                 "appToken": lw_token,
             }
-
-            # url = "https://olbdsknit5g6vrtztqq4wlotea0vvtxm.lambda-url.eu-west-2.on.aws/api/Inventory/postal-services?appName=pos&appToken=a12e1102-7ad2-7bcc-2029-cc910303a813"
             headers = {
                 "accept": "*/*",
             }
             response = requests.get(url, headers=headers, params=params, timeout=10)
             response.raise_for_status()
             data = response.json()
-            print("\n---DATA==========", data)
 
             if not isinstance(data, list):
                 raise UserError(_("Unexpected data format received from API. Expected a list of services."))
@@ -90,7 +87,6 @@ class ImportShippingServiceWizard(models.TransientModel):
                 except Exception as e:
                     _logger.error(f"Error creating/updating shipping service {service.get('id', 'Unknown')}: {str(e)}")
 
-            print("\n\n\nCreated/Updated Services >>>>>>.", created_services)
             return {
                 'type': 'ir.actions.client',
                 'tag': 'display_notification',

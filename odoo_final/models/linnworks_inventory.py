@@ -19,7 +19,6 @@ class LinnworksIntegration(models.Model):
         """Main import function with proper authentication handling.
         Will only import 200 products for testing purposes."""
         self.ensure_one()
-        print("\n\n\nThis method is called================")
         # First, get authentication token
         if not self._get_auth_token():
             raise UserError(_("Failed to authenticate with Linnworks API"))
@@ -165,7 +164,6 @@ class LinnworksIntegration(models.Model):
                 _logger.warning(f"Barcode {barcode} already exists for product {existing_barcode_product.default_code} (ID: {existing_barcode_product.id}). Skipping barcode assignment for new product with SKU {sku}.")
 
             product = Product.create(create_vals)
-            print("\n\nPRODUCT", product)
         else:
             # Update existing product with new data from Linnworks
             update_vals = {}
@@ -173,10 +171,9 @@ class LinnworksIntegration(models.Model):
             if product.name != name:
                 update_vals['name'] = name
 
-            print("itemid",itemid)
+            # Update SKU if changed
             if product.linnworks_item_id != itemid:
                 update_vals['linnworks_item_id'] = itemid
-                print("\n\nupdate_vals['linnworks_item_id']",update_vals['linnworks_item_id'])
 
             # Update barcode if changed and not duplicate
             if barcode and product.barcode != barcode:
@@ -200,8 +197,6 @@ class LinnworksIntegration(models.Model):
 
             # Apply all updates if any
             if update_vals:
-                # print("\n\nPRODUCT", product.id)
-                # update_vals['linnworks_location_id'] = ''
                 update_vals['linnworks_location_id'] = ','.join([stLevel.get('Location').get('StockLocationId') for stLevel in item.get('StockLevels')])
                 product.write(update_vals)
 

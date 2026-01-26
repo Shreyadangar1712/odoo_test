@@ -26,7 +26,6 @@ class PosOrder(models.Model):
         order_ids = super(PosOrder, self).create(values)
  
         for order in order_ids:
-            _logger.info("111111111111111111111111111111111111111111111111111111111111")
             _data = order.read()[0]
             _logger.info(_data)
             try:
@@ -34,7 +33,6 @@ class PosOrder(models.Model):
                 lw_token = icp.get_param("lw_token").strip()
                 rishvi_base_api_url = icp.get_param("rishvi_base_api_url").strip()
                 rishvi_app = icp.get_param("rishvi_app").strip()
-                _logger.info("2222222222222222222222222222222222222222222222222")
                 raw_time = str(order.date_order)
                 try:
                     # Try parsing normally first
@@ -181,5 +179,4 @@ class PosOrderLine(models.Model):
     def _load_pos_data_fields(self, config_id):
         res = super()._load_pos_data_fields(config_id)
         res.append('available_linn_qty')
-        print('\n\nres >>>>>.',res)
         return res
