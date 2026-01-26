@@ -93,11 +93,8 @@ class LinnController(http.Controller):
         try:
 
             response = requests.get(url, params=params, timeout=5)
-            print(f'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa{response.json()}')
-
             if response.status_code == 200:
                 data = response.json()
-                print(f'1111111111111111111111111111111111111111111111{data}')
                 pos_category_model = request.env['pos.category']
                 imported = 0
 

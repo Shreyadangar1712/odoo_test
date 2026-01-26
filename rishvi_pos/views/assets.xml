@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<odoo>
-<template id="assets" inherit_id="point_of_sale.assets_prod" name="POS Shipping Assets">
-    <xpath expr="." position="inside">
-        <script type="module" src="/Rishvi_POS/static/src/js/pos_models.js"/>
-    </xpath>
-</template>
-</odoo>
